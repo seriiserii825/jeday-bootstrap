@@ -1,0 +1,109 @@
+a:hover {
+  text-decoration: none;
+}
+
+/* navbar
+====================================================*/
+.header-top {
+  background: #343a40;
+}
+
+.navbar {
+  padding: 0.01rem 1rem;
+}
+
+.navbar-nav {
+  line-height: 3;
+}
+
+.navbar-dark .navbar-nav .nav-link:hover {
+  color: $accent;
+}
+
+.nav-item {
+  a {
+    display: block;
+  }
+
+  &.active {
+    a {
+      @include linear-bg();
+    }
+  }
+}
+
+.dropdown-menu {
+  .dropdown-item {
+    line-height: 1.4;
+
+    transition: all .5s ease;
+
+    &:hover {
+      @include linear-bg();
+    }
+  }
+}
+
+/* slider
+====================================================*/
+.carousel-item {
+  height: 100vh;
+  background: #666;
+}
+
+.carousel-indicators li {
+  width: 11px;
+  height: 11px;
+  border-radius: 50%;
+
+  &:hover {
+    cursor: pointer;
+  }
+
+  &.active {
+    background-color: $accent;
+    border-color: $accent;
+  }
+}
+
+.carousel-caption {
+  top: 20%;
+  bottom: auto;
+
+  text-align: left;
+
+  h3 {
+    font-size: 3em;
+  }
+
+  small {
+    display: block;
+    font-size: 0.6em;
+  }
+
+  p {
+    max-width: 430px;
+  }
+
+  .btn {
+    background: transparent;
+    border-color: $white;
+
+    transition: all .6s ease;
+
+    &:hover {
+      color: $white;
+      background: $accent;
+
+      cursor: pointer;
+    }
+  }
+}
+
+.carousel-control-next,
+.carousel-control-prev {
+  width: 45px;
+  background: rgba(0, 0, 0, .52);
+
+  transition: all .6s ease;
+}
