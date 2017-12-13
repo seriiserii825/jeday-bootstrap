@@ -1,0 +1,22 @@
+@font-face {
+    font-family: "OpenSans-Bold";
+    src: url("OpenSansBold.eot");
+    src: url("OpenSansBold.eot?#iefix") format("embedded-opentype"),
+         url("OpenSansBold.woff2") format("woff2"),
+         url("OpenSansBold.woff") format("woff"),
+         url("OpenSansBold.ttf") format("ttf"),
+         url("OpenSansBold.svg#OpenSans-Bold") format("svg");
+    font-style: normal;
+    font-weight: 700;
+}
+@font-face {
+    font-family: "OpenSans-Bold";
+    src: url("OpenSansBold.eot");
+    src: url("OpenSansBold.eot?#iefix") format("embedded-opentype"),
+         url("OpenSansBold.woff2") format("woff2"),
+         url("OpenSansBold.woff") format("woff"),
+         url("OpenSansBold.ttf") format("ttf"),
+         url("OpenSansBold.svg#OpenSans-Bold") format("svg");
+    font-style: normal;
+    font-weight: 700;
+}

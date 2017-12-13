@@ -6,11 +6,30 @@ a:hover {
 ====================================================*/
 
 .header-top {
-  background: #343a40;
+  background: #292929;
 }
 
 .navbar {
+  position: relative;
   padding: 0.01rem 1rem;
+  padding-left: 130px;
+
+  @media screen and (max-width: $lg) {
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+  }
+
+  &-brand {
+    position: absolute;
+    top: -6px;
+    left: 0;
+  }
+}
+
+.navbar-collapse {
+  @media screen and (max-width: $lg) {
+    padding-top: 20px;
+  }
 }
 
 .navbar-nav {
@@ -31,6 +50,57 @@ a:hover {
       @include linear-bg;
     }
   }
+}
+
+.navbar-dark .navbar-nav .nav-item.active .nav-link:hover {
+  color: $white;
+}
+
+.navbar-expand-lg
+.navbar-nav .nav-link {
+  padding-left: 1.2em;
+  padding-right: 1.2em;
+
+  @media screen and (max-width: $xl) {
+    padding-left: .8em;
+    padding-right: .8em;
+  }
+
+  @media screen and (max-width: $xl) {
+    padding-top: .8em;
+    padding-bottom: .8em;
+  }
+}
+
+.navbar-dark .navbar-nav .nav-link {
+  color: $white;
+
+  @media screen and (max-width: $xl) {
+    font-size: .8em;
+  }
+
+  @media screen and (max-width: $lg) {
+    font-size: 1em;
+  }
+}
+
+.navbar {
+  .phone {
+    display: flex;
+    align-items: center;
+    padding-left: .8em;
+
+    font-size: 1.2em;
+    font-weight: bold;
+
+    color: $white;
+
+    //order: 2;
+  }
+}
+
+.navbar-toggler {
+  //order: 1;
 }
 
 .dropdown-menu {

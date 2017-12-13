@@ -32,21 +32,29 @@ let path = {
         js: "build/assets/js/",
         css: "build/assets/css/",
         img: "build/assets/i/",
-        fonts: "build/assets/fonts/"
+        fonts: "build/assets/fonts/",
+        header: "build/assets/header/",
+        libs: "build/assets/libs/",
+        bootstrap: "build/assets/libs/bootstrap/"
     },
     src: {
         html: "src/*.{htm,html}",
-        js: "src/assets/js/*.js",
+        js: "src/assets/js/main.js",
         css: "src/assets/sass/style.scss",
         img: "src/assets/i/**/*.*",
-        fonts: "src/assets/fonts/**/*.*"
+        fonts: "src/assets/fonts/**/*.*",
+        header: "src/assets/header/header.scss",
+        libs: "src/assets/libs/**/*.*",
+        bootstrap: "src/assets/libs/bootstrap/bootstrap.js"
     },
     watch: {
         html: "src/**/*.{htm,html}",
         js: "src/assets/js/**/*.js",
         css: "src/assets/sass/**/*.scss",
         img: "src/assets/i/**/*.*",
-        fonts: "src/assets/fonts/**/*.*"
+        fonts: "src/assets/fonts/**/*.*",
+        header: "src/assets/header/**/*.scss",
+        libs: "src/assets/libs/**/*.*"
     },
     clean: "./build"
 };
@@ -75,6 +83,11 @@ gulp.task("html:build", function(){
         .pipe(browserSync.stream());
 });
 
+gulp.task("libs:build", function(){
+    return gulp.src(path.src.libs)
+        .pipe(gulp.dest(path.build.libs))
+        .pipe(browserSync.stream());
+});
 
 gulp.task("css:build", function(){
     gulp.src(path.src.css)
@@ -98,6 +111,27 @@ gulp.task("css:build", function(){
         .pipe(gulp.dest(path.build.css));
 });
 
+gulp.task("header:build", function(){
+    gulp.src(path.src.header)
+        .pipe(sourcemaps.init())
+        .pipe(plumber())
+        .pipe(sass())
+        .pipe(autoprefixer())
+        .pipe(removeComments())
+        .pipe(cssbeautify())
+        .pipe(sourcemaps.write())
+        .pipe(csscomb())
+        .pipe(gulp.dest(path.build.header))
+        .pipe(browserSync.stream())
+        .pipe(cssnano({
+            zindex: false,
+            discardComments: {
+                removeAll: true
+            }
+        }))
+        .pipe(rename("header.min.css"))
+        .pipe(gulp.dest(path.build.header));
+});
 
 gulp.task("js:build", function(){
     gulp.src(path.src.js)
@@ -116,16 +150,30 @@ gulp.task("js:build", function(){
         .pipe(browserSync.stream());
 });
 
+gulp.task("bootstrap:build", function(){
+    gulp.src(path.src.bootstrap)
+        .pipe(plumber())
+        .pipe(rigger())
+        .pipe(gulp.dest(path.build.bootstrap))
+        .pipe(babel({
+            presets: ['env']
+        }))
+        .pipe(uglify())
+        .pipe(removeComments())
+        .pipe(rename("bootstrap.min.js"))
+        .pipe(gulp.dest(path.build.bootstrap))
+        .pipe(browserSync.stream());
+});
 
 gulp.task("fonts:build", function(){
     gulp.src(path.src.fonts)
         .pipe(gulp.dest(path.build.fonts));
 });
 
-gulp.task('fontgen', function() {
+gulp.task('fontgen', function(){
     return gulp.src("src/assets/fonts/*.{ttf,otf}")
         .pipe(plumber())
-        .pipe(map(function(file, cb) {
+        .pipe(map(function(file, cb){
             fontfacegen({
                 source: file.path,
                 dest: './src/assets/fonts/'
@@ -157,6 +205,9 @@ gulp.task('build', function(cb){
         "clean",
         "html:build",
         "css:build",
+        "header:build",
+        "libs:build",
+        "bootstrap:build",
         "js:build",
         "fonts:build",
         "image:build"
@@ -170,6 +221,12 @@ gulp.task("watch", function(){
     });
     watch([path.watch.css], function(event, cb){
         gulp.start("css:build");
+    });
+    watch([path.watch.libs], function(event, cb){
+        gulp.start("css:libs");
+    });
+    watch([path.watch.header], function(event, cb){
+        gulp.start("header:build");
     });
     watch([path.watch.js], function(event, cb){
         gulp.start("js:build");
