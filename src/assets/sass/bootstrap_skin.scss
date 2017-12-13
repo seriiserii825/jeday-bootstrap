@@ -4,6 +4,7 @@ a:hover {
 
 /* navbar
 ====================================================*/
+
 .header-top {
   background: #343a40;
 }
@@ -27,7 +28,7 @@ a:hover {
 
   &.active {
     a {
-      @include linear-bg();
+      @include linear-bg;
     }
   }
 }
@@ -35,17 +36,17 @@ a:hover {
 .dropdown-menu {
   .dropdown-item {
     line-height: 1.4;
-
     transition: all .5s ease;
 
     &:hover {
-      @include linear-bg();
+      @include linear-bg;
     }
   }
 }
 
 /* slider
 ====================================================*/
+
 .carousel-item {
   height: 100vh;
   background: #666;
@@ -69,7 +70,6 @@ a:hover {
 .carousel-caption {
   top: 20%;
   bottom: auto;
-
   text-align: left;
 
   h3 {
@@ -88,13 +88,11 @@ a:hover {
   .btn {
     background: transparent;
     border-color: $white;
-
     transition: all .6s ease;
 
     &:hover {
       color: $white;
       background: $accent;
-
       cursor: pointer;
     }
   }
@@ -103,7 +101,91 @@ a:hover {
 .carousel-control-next,
 .carousel-control-prev {
   width: 45px;
-  background: rgba(0, 0, 0, .52);
-
+  background: rgba(0, 0, 0, 0.52);
   transition: all .6s ease;
+}
+
+/* card
+====================================================*/
+
+.card-header {
+  background: $accent-light;
+
+  .btn {
+    color: #242424;
+    background: #f2cb5b;
+    border-color: #b57725;
+  }
+
+  .btn-primary:not([disabled]):not(.disabled):active,
+  .btn-primary:not([disabled]):not(.disabled).active, .show >
+  .btn-primary.dropdown-toggle {
+    background: #f2cb5b;
+    border-color: #b57725;
+    box-shadow: none;
+  }
+
+  .btn-primary:focus,
+  .btn-primary.focus {
+    box-shadow: none;
+  }
+}
+
+.card-body {
+  padding: .5rem;
+
+  color: $text-color;
+  background: transparent;
+}
+
+/* input
+====================================================*/
+.input-group-addon {
+  background: $accent-light;
+  border-color: $accent-light;
+}
+
+.input-group {
+
+  margin-bottom: 6px;
+
+  .form-control {
+
+    &:focus {
+      border-color: $accent-light;
+      outline: none;
+      box-shadow: none;
+    }
+  }
+}
+
+/* accordion
+====================================================*/
+.accordion {
+
+  .card-header a {
+    color: #654417;
+  }
+
+  .card-body {
+    color: #242424;
+    background: #efe9e0;
+  }
+}
+
+/* list
+====================================================*/
+.accordion {
+  .list-group li {
+    text-transform: uppercase;
+
+    border: none;
+    background: none;
+  }
+
+  .list-group span {
+    display: inline-block;
+
+    border-bottom: 1px dashed #1b1e21;
+  }
 }
