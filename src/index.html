@@ -2,85 +2,436 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport"
-          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="stylesheet" href="assets/fonts/font-awesome-4.7.0/css/font-awesome.min.css">
-    <link rel="stylesheet" href="assets/header/header.css">
-    <link rel="stylesheet" href="assets/css/style.css">
-    <title>Document</title>
+	<meta charset="UTF-8">
+	<meta name="viewport"
+	      content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<link rel="stylesheet" href="assets/fonts/font-awesome-4.7.0/css/font-awesome.min.css">
+	<link rel="stylesheet" href="assets/header/header.css">
+	<link rel="stylesheet" href="assets/css/style.css">
+	<title>Document</title>
 </head>
 
 <body>
 
+<!--header-main-->
 <header class="header-main">
-    <!--navbar-->
-    <div class="header-top">
-      <div class="container">
-          <nav class="navbar navbar-expand-lg navbar-dark">
+	<!--navbar-->
+	<div class="header-top">
+		<div class="container">
+			<nav class="navbar navbar-expand-lg navbar-dark">
 
-              <a class="navbar-brand" href="#">
-                  <img src="assets/i/logo.png" alt="logo">
-              </a>
+				<a class="navbar-brand" href="#">
+					<img src="assets/i/logo.png" alt="logo">
+				</a>
 
-              <button class="navbar-toggler ml-auto" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
-                      aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                  <span class="navbar-toggler-icon"></span>
-              </button>
+				<button class="navbar-toggler ml-auto" type="button" data-toggle="collapse"
+				        data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+				        aria-expanded="false" aria-label="Toggle navigation">
+					<span class="navbar-toggler-icon"></span>
+				</button>
 
-              <div class="collapse navbar-collapse" id="navbarSupportedContent">
+				<div class="collapse navbar-collapse" id="navbarSupportedContent">
 
-                  <ul class="navbar-nav mr-auto">
+					<ul class="navbar-nav mr-auto">
 
-                      <li class="nav-item active">
-                          <a class="nav-link" href="#">Главная<span class="sr-only">(current)</span></a>
-                      </li>
+						<li class="nav-item active">
+							<a class="nav-link" href="#">Главная<span class="sr-only">(current)</span></a>
+						</li>
 
-                      <li class="nav-item">
-                          <a class="nav-link" href="#">О компании</a>
-                      </li>
+						<li class="nav-item">
+							<a class="nav-link" href="#">О компании</a>
+						</li>
 
-                      <li class="nav-item dropdown">
-                          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
-                             data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                              Рекомендации
-                          </a>
-                          <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                              <a class="dropdown-item" href="#">Action</a>
-                              <a class="dropdown-item" href="#">Another action</a>
-                              <div class="dropdown-divider"></div>
-                              <a class="dropdown-item" href="#">Something else here</a>
-                          </div>
-                      </li>
+						<li class="nav-item dropdown">
+							<a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+							   data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+								Рекомендации
+							</a>
+							<div class="dropdown-menu" aria-labelledby="navbarDropdown">
+								<a class="dropdown-item" href="#">Action</a>
+								<a class="dropdown-item" href="#">Another action</a>
+								<div class="dropdown-divider"></div>
+								<a class="dropdown-item" href="#">Something else here</a>
+							</div>
+						</li>
 
-                      <li class="nav-item">
-                          <a class="nav-link" href="#">Услуги</a>
-                      </li>
+						<li class="nav-item">
+							<a class="nav-link" href="#">Услуги</a>
+						</li>
 
-                      <li class="nav-item">
-                          <a class="nav-link" href="#">Законодательство</a>
-                      </li>
+						<li class="nav-item">
+							<a class="nav-link" href="#">Законодательство</a>
+						</li>
 
-                      <li class="nav-item">
-                          <a class="nav-link" href="#">Наши клиенты</a>
-                      </li>
+						<li class="nav-item">
+							<a class="nav-link" href="#">Наши клиенты</a>
+						</li>
 
-                      <li class="nav-item">
-                          <a class="nav-link" href="#">Контакты</a>
-                      </li>
+						<li class="nav-item">
+							<a class="nav-link" href="#">Контакты</a>
+						</li>
 
-                      <div class="phone">
-                          8(495)974-16-44
-                      </div>
+						<div class="phone">
+							8(495)974-16-44
+						</div>
 
-                  </ul>
+					</ul>
 
-              </div>
-          </nav>
-      </div>
-    </div>
+				</div>
+			</nav>
+		</div>
+	</div>
 </header>
+
+<!--slider-->
+<div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+	<ol class="carousel-indicators">
+		<li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+		<li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+	</ol>
+	<div class="carousel-inner">
+
+		<div class="carousel-item active">
+
+			<div class="img" style="background-image: url('assets/i/slide_1.jpg')"></div>
+
+			<div class="carousel-caption">
+				<h3>Перепланировка помещений
+					<small>в Москве и Московской области</small>
+				</h3>
+				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. A atque vel veritatis. Aliquid architecto
+					assumenda atque nesciunt placeat quaerat quibusdam vel? Cupiditate, doloremque doloribus est eveniet
+					maiores possimus qui ut!
+				</p>
+				<div class="btn btn-large">Читать далее</div>
+			</div>
+		</div>
+
+		<div class="carousel-item">
+
+			<div class="img" style="background-image: url('assets/i/slide_2.jpg')"></div>
+
+			<div class="carousel-caption">
+				<h3>Перепланировка помещений
+					<small>в Москве и Московской области</small>
+				</h3>
+				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab accusamus aliquid commodi culpa hic, id
+					magni maxime nam natus nobis non placeat qui quo reiciendis saepe! Eius mollitia repellendus
+					voluptas?
+				</p>
+				<div class="btn btn-large">Читать далее</div>
+			</div>
+
+		</div>
+
+	</div>
+	<a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+		<span class="carousel-control-prev-icon" aria-hidden="true"></span>
+		<span class="sr-only">Previous</span>
+	</a>
+	<a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+		<span class="carousel-control-next-icon" aria-hidden="true"></span>
+		<span class="sr-only">Next</span>
+	</a>
+</div>
+
+<section class="main">
+	<div class="container">
+		<div class="row">
+
+			<!--main-content-->
+			<div class="col-lg-9 order-lg-2">
+				<div class="main-content">
+
+					<h1>Перепланировка помещений по Москве</h1>
+
+					<div class="tills">
+						<div class="row">
+
+							<div class="col-md-6">
+
+								<div class="till-item">
+
+									<div class="img-wrap">
+										<img src="assets/i/till-1.jpg" alt="image">
+									</div>
+
+									<div class="till-caption">
+										<h3>Согласование перепланировки квартир в Москве</h3>
+										<div class="overlay"></div>
+									</div>
+
+								</div>
+
+							</div>
+
+							<div class="col-md-6">
+
+								<div class="till-item">
+
+									<div class="img-wrap">
+										<img src="assets/i/till-2.jpg" alt="image">
+									</div>
+
+									<div class="till-caption">
+										<h3>Порядок согласования перепланировки</h3>
+										<div class="overlay"></div>
+									</div>
+
+								</div>
+
+							</div>
+
+							<div class="col-md-6">
+
+								<div class="till-item">
+
+										<div class="img-wrap">
+										<img src="assets/i/till-3.jpg" alt="image">
+									</div>
+
+									<div class="till-caption">
+										<h3>Согласования порядка перепланировки</h3>
+										<div class="overlay"></div>
+									</div>
+
+								</div>
+
+							</div>
+
+							<div class="col-md-6">
+
+								<div class="till-item">
+
+									<div class="img-wrap">
+										<img src="assets/i/till-4.jpg" alt="image">
+									</div>
+
+									<div class="till-caption">
+										<h3>Стоимость и сроки согласования</h3>
+										<div class="overlay"></div>
+									</div>
+
+								</div>
+
+							</div>
+
+						</div><!--row-->
+					</div><!--tills-->
+
+				</div>
+			</div>
+
+			<!--sidebar-->
+			<div class="col-lg-3 order-lg-1">
+				<aside class="sidebar">
+
+					<!--box-search-->
+					<div class="box box-search">
+						<div class="card">
+							<div class="card-header">
+								<div class="input-group">
+
+									<input type="text" class="form-control" placeholder="Поиск по сайту"
+									       aria-label="Username" aria-describedby="basic-addon1">
+
+									<span class="input-group-addon" id="basic-addon1">
+                                        <i class="fa fa-search" aria-hidden="true"></i>
+                                    </span>
+
+								</div>
+							</div>
+						</div>
+
+					</div><!--box-search-->
+
+					<!--box-form-->
+					<div class="box box-form">
+						<div class="card">
+
+							<div class="card-header">
+								<h4 class="card-title">
+									Бланк Заявки
+									<a href="#" class="btn btn-primary ml-auto">Отправить заявку</a>
+								</h4>
+							</div>
+
+							<div class="card-body">
+
+								<div class="input-group">
+
+                                        <span class="input-group-addon" id="basic-addon2">
+                                            <i class="fa fa-user"></i>
+                                        </span>
+
+									<input type="text" class="form-control" placeholder="Ваше имя" aria-label="Username"
+									       aria-describedby="basic-addon2">
+
+								</div>
+
+								<div class="input-group">
+
+                                        <span class="input-group-addon" id="basic-addon3">
+                                            <i class="fa fa-phone"></i>
+                                        </span>
+
+									<input type="text" class="form-control" placeholder="Ваш телефон"
+									       aria-label="Username" aria-describedby="basic-addon3">
+
+								</div>
+
+							</div>
+
+						</div>
+
+					</div><!--box-form-->
+
+					<!--box-accordion-->
+					<div class="box box-accordion">
+						<div id="accordion" class="accordion" role="tablist">
+							<div class="card">
+
+								<div class="card-header" role="tab" id="headingOne">
+									<h5 class="mb-0">
+										<a data-toggle="collapse" href="#collapseOne" aria-expanded="true"
+										   aria-controls="collapseOne">
+											СОГЛАСОВАНИЕ ПЕРЕПЛАНИРОВКИ
+										</a>
+									</h5>
+								</div>
+
+								<div id="collapseOne" class="collapse show" role="tabpanel" aria-labelledby="headingOne"
+								     data-parent="#accordion">
+									<div class="card-body">
+										<ul class="list-group">
+											<li class="list-group-item"><span>ПЕРЕПЛАНИРОВКА КВАРТИР</span></li>
+											<li class="list-group-item"><span>СТОИМОСТЬ ПЕРЕПЛАНИРОВКИ</span></li>
+											<li class="list-group-item"><span>СОГЛАСОВАНИЕ РЕКОНСТРУКЦИЙ ЗДАНИЙ</span>
+											</li>
+											<li class="list-group-item"><span>ПЕРЕПЛАНИРОВКА КВАРТИР</span></li>
+											<li class="list-group-item"><span>СТОИМОСТЬ ПЕРЕПЛАНИРОВКИ</span></li>
+										</ul>
+									</div>
+								</div>
+
+							</div>
+
+							<div class="card">
+
+								<div class="card-header" role="tab" id="headingTwo">
+									<h5 class="mb-0">
+										<a class="collapsed" data-toggle="collapse" href="#collapseTwo"
+										   aria-expanded="false" aria-controls="collapseTwo">
+											СОГЛАСОВАНИЕ РЕКОНСТРУКЦИЙ ЗДАНИЙ
+										</a>
+									</h5>
+								</div>
+								<div id="collapseTwo" class="collapse" role="tabpanel" aria-labelledby="headingTwo"
+								     data-parent="#accordion">
+									<div class="card-body">
+										<ul class="list-group">
+											<li class="list-group-item"><span>ПРОЕКТИРОВАНИЕ</span></li>
+											<li class="list-group-item"><span>РЕМОНТ КВAPTИР И ОФИСОВ</span></li>
+											<li class="list-group-item"><span>ЛАНДШАФТНОЕ ПРОЕКТИРОВАНИЕ</span></li>
+											<li class="list-group-item"><span>ДИЗАЙН ИНТЕРЬЕРОВ.КВАРТИР</span></li>
+											<li class="list-group-item"><span>В НЕЖИЛОЙ</span></li>
+											<li class="list-group-item"><span>ПР.ИСОЕДИНЕНИЕ ПОМЕЩЕНИЙ</span></li>
+											<li class="list-group-item"><span>ИМУЩЕСТВА</span></li>
+										</ul>
+									</div>
+								</div>
+
+							</div>
+
+						</div>
+					</div><!--box-accordion-->
+
+					<!--box-slider-->
+					<div class="box box-slider">
+
+						<h4>Интересные статьи</h4>
+
+						<div id="sidebar-slider" class="carousel slide" data-ride="carousel">
+
+							<ol class="carousel-indicators">
+								<li data-target="#sidebar-slider" data-slide-to="0" class="active"></li>
+								<li data-target="#sidebar-slider" data-slide-to="1"></li>
+							</ol>
+
+							<div class="carousel-inner">
+
+								<div class="carousel-item active">
+									<div class="carousel-caption">
+										<p class="cite">"As font, typography, and
+											paout without being dis-
+											tracted by the content."
+										</p>
+										<p>Replacing meaningful content with
+											placeholder text allows viewers to
+											focus on graphic aspects such as font,
+											typography, aed by t meaningful text,
+											as they can instead use quickly-gener-
+											ated lorem ipsum.
+										</p>
+										<p>The lorem ipsum text is typically a
+											scrambled section of De finibus bono-
+											rum et malorum, a 1st-century BC...
+										</p>
+										<a href="#" class="read-more">Читать далее ></a>
+									</div>
+								</div>
+
+								<div class="carousel-item">
+									<div class="carousel-caption">
+										<p class="cite">"As font, typography, and
+											paout without being dis-
+											tracted by the content."
+										</p>
+										<p>Replacing meaningful content with
+											placeholder text allows viewers to
+											focus on graphic aspects such as font,
+											typography, aed by t meaningful text,
+											as they can instead use quickly-gener-
+											ated lorem ipsum.
+										</p>
+										<p>The lorem ipsum text is typically a
+											scrambled section of De finibus bono-
+											rum et malorum, a 1st-century BC...
+										</p>
+										<a href="#" class="read-more">Читать далее ></a>
+									</div>
+								</div>
+
+								<!--carousel-controls-->
+								<div class="carousel-controls">
+									<a class="carousel-control-prev" href="#sidebar-slider" role="button"
+									   data-slide="prev">
+										<!--<span class="carousel-control-prev-icon" aria-hidden="true"></span>-->
+										<i class="fa fa-angle-left carousel-control-prev-icon" aria-hidden="true"></i>
+										<span class="sr-only">Previous</span>
+									</a>
+									<a class="carousel-control-next" href="#sidebar-slider" role="button"
+									   data-slide="next">
+										<!--<span class="carousel-control-next-icon" aria-hidden="true"></span>-->
+										<i class="fa fa-angle-right carousel-control-next-icon" aria-hidden="true"></i>
+										<span class="sr-only">Next</span>
+									</a>
+								</div><!--carousel-controls-->
+
+							</div><!--carousel-inner-->
+
+						</div><!--carousel.slider-->
+
+					</div><!--box box-slider-->
+
+				</aside>
+
+			</div>
+
+		</div>
+	</div>
+</section>
 
 <!--accordion-->
 <!--<div id="accordion" class="accordion" role="tablist">
@@ -174,17 +525,18 @@
 
             <div class="input-group">
                 <span class="input-group-addon" id="basic-addon1">@</span>
-                <input type="text" class="form-control" placeholder="Username" aria-label="Username" aria-describedby="basic-addon1">
+                <input type="text" class="form-control" placeholder="Username"
+                       aria-label="Username" aria-describedby="basic-addon1">
             </div>
             <div class="input-group">
                 <span class="input-group-addon" id="basic-addon1">@</span>
-                <input type="text" class="form-control" placeholder="Username" aria-label="Username" aria-describedby="basic-addon1">
+                <input type="text" class="form-control" placeholder="Username"
+                       aria-label="Username" aria-describedby="basic-addon1">
             </div>
 
         </div>
     </div>
 </div>-->
-
 
 <!--navbar-->
 <!--<div class="header-top">
@@ -229,54 +581,6 @@
   </div>
 </div>-->
 
-<!--carousel-->
-<!--<div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
-  <ol class="carousel-indicators">
-      <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
-      <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
-      <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
-  </ol>
-  <div class="carousel-inner">
-      <div class="carousel-item active">
-          &lt;!&ndash;<img class="d-block w-100" src="..." alt="First slide">&ndash;&gt;
-          <div class="carousel-caption">
-              <h3>Перепланировка помещений <small>в Москве и Московской области</small></h3>
-              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. A atque vel veritatis. Aliquid architecto
-                  assumenda atque nesciunt placeat quaerat quibusdam vel? Cupiditate, doloremque doloribus est eveniet
-                  maiores possimus qui ut!</p>
-              <div class="btn btn-large">Читать далее</div>
-          </div>
-      </div>
-      <div class="carousel-item">
-          &lt;!&ndash;<img class="d-block w-100" src="..." alt="Second slide">&ndash;&gt;
-          <div class="carousel-caption">
-              <h3>Перепланировка помещений <small>в Москве и Московской области</small></h3>
-              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab accusamus aliquid commodi culpa hic, id
-                  magni maxime nam natus nobis non placeat qui quo reiciendis saepe! Eius mollitia repellendus
-                  voluptas?</p>
-              <div class="btn btn-large">Читать далее</div>
-          </div>
-      </div>
-      <div class="carousel-item">
-          &lt;!&ndash;<img class="d-block w-100" src="..." alt="Third slide">&ndash;&gt;
-          <div class="carousel-caption">
-              <h3>Перепланировка помещений <small>в Москве и Московской области</small></h3>
-              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Atque dignissimos eaque est excepturi
-                  exercitationem explicabo hic illo illum in inventore, laudantium modi natus nihil nulla officiis
-                  porro rerum similique sint.</p>
-              <div class="btn btn-large">Читать далее</div>
-          </div>
-      </div>
-  </div>
-  <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
-      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-      <span class="sr-only">Previous</span>
-  </a>
-  <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
-      <span class="carousel-control-next-icon" aria-hidden="true"></span>
-      <span class="sr-only">Next</span>
-  </a>
-</div>-->
 
 <script src="assets/libs/bootstrap/bootstrap.js"></script>
 <script src="assets/js/main.js"></script>

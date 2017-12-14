@@ -5,9 +5,61 @@
 @include font-face("RobotoRegular", "/assets/fonts/RobotoRegular");
 @include font-face("RobotoBold", "/assets/fonts/RobotoBold");
 
-@import "partials/variables";
-@import "partials/mixins";
-@import "partials/templates";
+@import "../sass/partials/variables";
+@import "../sass/partials/mixins";
+@import "../sass/partials/templates";
 @import "../../../node_modules/bootstrap/scss/bootstrap";
-@import "bootstrap_skin";
+@import "../sass/bootstrap_skin";
 
+html,
+body {
+  font-size: 14px;
+}
+
+body {
+  font-family: "OpenSansRegular", sans-serif;
+}
+
+/* navbar
+====================================================*/
+.navbar-brand {
+  z-index: 20;
+}
+
+/* slider
+====================================================*/
+.carousel-caption {
+  @media screen and (max-width: $sm) {
+    padding-top: 0;
+  }
+
+  h3 {
+    @media screen and (max-width: 490px) {
+      font-size: 2.4em;
+    }
+
+    @media screen and (max-width: 390px) {
+      font-size: 2.2em;
+    }
+  }
+}
+
+.carousel-inner .img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: center;
+
+  &::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, .6);
+  }
+}

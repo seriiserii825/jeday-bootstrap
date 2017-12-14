@@ -177,9 +177,21 @@ a:hover {
 
 /* card
 ====================================================*/
+.card {
+  border: 0;
+}
+
+.card-title {
+  font-size: 1.3em;
+}
 
 .card-header {
   background: $accent-light;
+
+  &:first-child {
+    border-top-left-radius: 4px;
+    border-top-right-radius: 4px;
+  }
 
   .btn {
     color: #242424;
@@ -206,6 +218,7 @@ a:hover {
 
   color: $text-color;
   background: transparent;
+  border: 1px solid rgba(0, 0, 0, .15);
 }
 
 /* input
@@ -218,6 +231,10 @@ a:hover {
 .input-group {
 
   margin-bottom: 6px;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
 
   .form-control {
 
@@ -241,16 +258,16 @@ a:hover {
     color: #242424;
     background: #efe9e0;
   }
-}
 
-/* list
-====================================================*/
-.accordion {
   .list-group li {
     text-transform: uppercase;
 
-    border: none;
+    border: 0;
     background: none;
+  }
+
+  .list-group-item {
+    padding: .5em 1em;
   }
 
   .list-group span {

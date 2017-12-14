@@ -1,0 +1,39 @@
+@mixin border-radius($radius) {
+  border-radius: $radius;
+}
+
+@mixin linear-bg {
+  background: linear-gradient(#ef5f31, #f4883b);
+}
+
+$browser-context: 14px;
+
+@function em($pixels, $context: $browser-context) {
+  @if (unitless($pixels)) {
+    $pixels: $pixels * 1px;
+  }
+
+  @if (unitless($context)) {
+    $context: $context * 1px;
+  }
+
+  @return $pixels / $context * 1em;
+}
+
+/* fonts
+====================================================*/
+@mixin opensans {
+  font-family: "OpenSans", sans-serif;
+}
+
+@mixin opensansbold {
+  font-family: "OpenSansBold", sans-serif;
+}
+
+@mixin roboto {
+  font-family: "RobotoRegular", sans-serif;
+}
+
+@mixin robotobold {
+  font-family: "RobotoBold", sans-serif;
+}
